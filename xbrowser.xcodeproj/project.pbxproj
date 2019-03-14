@@ -16,6 +16,7 @@
 		AE4081FF22397BF000D1C60B /* XBrowser.js in Resources */ = {isa = PBXBuildFile; fileRef = AE4081FE22397BF000D1C60B /* XBrowser.js */; };
 		AE408201223996DA00D1C60B /* XbHandledInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE408200223996DA00D1C60B /* XbHandledInfo.swift */; };
 		AE40820322399A8C00D1C60B /* XbUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE40820222399A8C00D1C60B /* XbUtil.swift */; };
+		AEA96B36223A950D00BA16F8 /* XbHandleOpt.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEA96B35223A950D00BA16F8 /* XbHandleOpt.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,6 +53,7 @@
 		AE4081FE22397BF000D1C60B /* XBrowser.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = XBrowser.js; sourceTree = "<group>"; };
 		AE408200223996DA00D1C60B /* XbHandledInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XbHandledInfo.swift; sourceTree = "<group>"; };
 		AE40820222399A8C00D1C60B /* XbUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XbUtil.swift; sourceTree = "<group>"; };
+		AEA96B35223A950D00BA16F8 /* XbHandleOpt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XbHandleOpt.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -137,6 +139,7 @@
 				AE4081FB2239715100D1C60B /* XbCore.swift */,
 				AE408200223996DA00D1C60B /* XbHandledInfo.swift */,
 				AE40820222399A8C00D1C60B /* XbUtil.swift */,
+				AEA96B35223A950D00BA16F8 /* XbHandleOpt.swift */,
 			);
 			path = Core;
 			sourceTree = "<group>";
@@ -286,6 +289,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AE4081FC2239715100D1C60B /* XbCore.swift in Sources */,
+				AEA96B36223A950D00BA16F8 /* XbHandleOpt.swift in Sources */,
 				AE13772D22393DF900C31500 /* AppDelegate.swift in Sources */,
 				AE408201223996DA00D1C60B /* XbHandledInfo.swift in Sources */,
 				AE40820322399A8C00D1C60B /* XbUtil.swift in Sources */,

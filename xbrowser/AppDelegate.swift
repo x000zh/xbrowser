@@ -19,7 +19,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     func applicationDidFinishLaunching(_ aNotification: Notification) {
         // Insert code here to initialize your application
         
-        let bundleId = Bundle.main.bundleIdentifier  as! CFString
+        let bundleId = Bundle.main.bundleIdentifier!  as CFString
         LSSetDefaultHandlerForURLScheme("http" as CFString, bundleId)
         LSSetDefaultHandlerForURLScheme("https" as CFString, bundleId)
         
@@ -36,8 +36,8 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         statusBarItem.button?.image = img
         
         let menu = NSMenu.init()
-        menu.addItem(NSMenuItem.init(title: "Reload Config", action: Selector.init("reloadConfig"), keyEquivalent: "R"))
-        menu.addItem(NSMenuItem.init(title: "Quit", action: Selector.init("quit"), keyEquivalent: "Q"))
+        menu.addItem(NSMenuItem.init(title: "Reload Config", action: #selector(reloadConfig), keyEquivalent: "R"))
+        menu.addItem(NSMenuItem.init(title: "Quit", action: #selector(quit), keyEquivalent: "Q"))
         
         statusBarItem.menu = menu;
     }

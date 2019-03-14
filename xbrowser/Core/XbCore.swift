@@ -52,9 +52,15 @@ class XbCore: NSObject{
         //NSLog(url.absoluteString)
         let xBrowser = ctx.objectForKeyedSubscript(XbCore.xBrowserKey)
         logException()
-        let val = xBrowser?.invokeMethod("getHandledInfo", withArguments: [url.absoluteString, nil])
+        let opt = makeOpt(url: url, app: app)
+        let val = xBrowser?.invokeMethod("getHandledInfo",
+                                         withArguments: [url.absoluteString, opt])
         logException()
         return parseValue(val)
+    }
+    
+    func makeOpt(url: URL, app: NSApplication) -> XbHandleOpt? {
+        app.
     }
     
     func parseValue(_ val: JSValue?) -> XbHandledInfo?{

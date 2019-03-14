@@ -14,7 +14,7 @@ class XbUtil: NSObject {
         if nil == s {
             return ""
         }else{
-            return s as! String
+            return s! as String
         }
     }
 }
