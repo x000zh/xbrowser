@@ -23,7 +23,6 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         LSSetDefaultHandlerForURLScheme("http" as CFString, bundleId)
         LSSetDefaultHandlerForURLScheme("https" as CFString, bundleId)
         
-        window.setIsVisible(false)
         _ = toggleDockIcon(false)
         checkStatusBarItem()
     }
@@ -53,6 +52,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     
     func applicationWillFinishLaunching(_ aNotification: Notification) {
         xbCore = XbCore()
+        window.setIsVisible(false)
     }
 
     func applicationWillTerminate(_ aNotification: Notification) {
