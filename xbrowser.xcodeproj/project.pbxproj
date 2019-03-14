@@ -12,6 +12,10 @@
 		AE13773222393DF900C31500 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = AE13773022393DF900C31500 /* MainMenu.xib */; };
 		AE13773E22393DF900C31500 /* xbrowserTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE13773D22393DF900C31500 /* xbrowserTests.swift */; };
 		AE13774922393DFA00C31500 /* xbrowserUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE13774822393DFA00C31500 /* xbrowserUITests.swift */; };
+		AE4081FC2239715100D1C60B /* XbCore.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE4081FB2239715100D1C60B /* XbCore.swift */; };
+		AE4081FF22397BF000D1C60B /* XBrowser.js in Resources */ = {isa = PBXBuildFile; fileRef = AE4081FE22397BF000D1C60B /* XBrowser.js */; };
+		AE408201223996DA00D1C60B /* XbHandledInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE408200223996DA00D1C60B /* XbHandledInfo.swift */; };
+		AE40820322399A8C00D1C60B /* XbUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE40820222399A8C00D1C60B /* XbUtil.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +48,10 @@
 		AE13774422393DFA00C31500 /* xbrowserUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = xbrowserUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		AE13774822393DFA00C31500 /* xbrowserUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = xbrowserUITests.swift; sourceTree = "<group>"; };
 		AE13774A22393DFA00C31500 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AE4081FB2239715100D1C60B /* XbCore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XbCore.swift; sourceTree = "<group>"; };
+		AE4081FE22397BF000D1C60B /* XBrowser.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = XBrowser.js; sourceTree = "<group>"; };
+		AE408200223996DA00D1C60B /* XbHandledInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XbHandledInfo.swift; sourceTree = "<group>"; };
+		AE40820222399A8C00D1C60B /* XbUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XbUtil.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,6 +102,8 @@
 		AE13772B22393DF900C31500 /* xbrowser */ = {
 			isa = PBXGroup;
 			children = (
+				AE4081FD22397B7300D1C60B /* JsCore */,
+				AE4081FA223970F000D1C60B /* Core */,
 				AE13772C22393DF900C31500 /* AppDelegate.swift */,
 				AE13772E22393DF900C31500 /* Assets.xcassets */,
 				AE13773022393DF900C31500 /* MainMenu.xib */,
@@ -119,6 +129,24 @@
 				AE13774A22393DFA00C31500 /* Info.plist */,
 			);
 			path = xbrowserUITests;
+			sourceTree = "<group>";
+		};
+		AE4081FA223970F000D1C60B /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				AE4081FB2239715100D1C60B /* XbCore.swift */,
+				AE408200223996DA00D1C60B /* XbHandledInfo.swift */,
+				AE40820222399A8C00D1C60B /* XbUtil.swift */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		AE4081FD22397B7300D1C60B /* JsCore */ = {
+			isa = PBXGroup;
+			children = (
+				AE4081FE22397BF000D1C60B /* XBrowser.js */,
+			);
+			path = JsCore;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -189,6 +217,11 @@
 				TargetAttributes = {
 					AE13772822393DF900C31500 = {
 						CreatedOnToolsVersion = 10.1;
+						SystemCapabilities = {
+							com.apple.Sandbox = {
+								enabled = 0;
+							};
+						};
 					};
 					AE13773822393DF900C31500 = {
 						CreatedOnToolsVersion = 10.1;
@@ -225,6 +258,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AE4081FF22397BF000D1C60B /* XBrowser.js in Resources */,
 				AE13772F22393DF900C31500 /* Assets.xcassets in Resources */,
 				AE13773222393DF900C31500 /* MainMenu.xib in Resources */,
 			);
@@ -251,7 +285,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AE4081FC2239715100D1C60B /* XbCore.swift in Sources */,
 				AE13772D22393DF900C31500 /* AppDelegate.swift in Sources */,
+				AE408201223996DA00D1C60B /* XbHandledInfo.swift in Sources */,
+				AE40820322399A8C00D1C60B /* XbUtil.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -417,7 +454,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = xbrowser/xbrowser.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = DYWT34U2TZ;
@@ -436,7 +472,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = xbrowser/xbrowser.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = DYWT34U2TZ;
