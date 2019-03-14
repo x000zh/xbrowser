@@ -10,6 +10,7 @@ class XBrowser{
         //"com.google.Chrome"
         this.chrome = "com.google.Chrome";
         this.safari = "com.apple.Safari";
+        this.firefox = "org.mozilla.firefox";
         let self = this;
         this.rules = [
         ];
