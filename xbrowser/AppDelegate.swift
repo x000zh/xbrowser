@@ -14,6 +14,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     @IBOutlet weak var window: NSWindow!
 
     var xbCore: XbCore!
+    var statusBarItem: NSStatusItem!
 
     func applicationDidFinishLaunching(_ aNotification: Notification) {
         // Insert code here to initialize your application
@@ -22,7 +23,32 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         LSSetDefaultHandlerForURLScheme("http" as CFString, bundleId)
         LSSetDefaultHandlerForURLScheme("https" as CFString, bundleId)
         
-        toggleDockIcon(false)
+        window.setIsVisible(false)
+        _ = toggleDockIcon(false)
+        checkStatusBarItem()
+    }
+    
+    func checkStatusBarItem(){
+        let iconSize = NSStatusBar.system.thickness * 0.9
+        statusBarItem = NSStatusBar.system.statusItem(
+            withLength: NSStatusBar.system.thickness)
+        let img = NSImage.init(named: "AppIcon")
+        img?.size = NSSize.init(width: iconSize , height: iconSize)
+        statusBarItem.button?.image = img
+        
+        let menu = NSMenu.init()
+        menu.addItem(NSMenuItem.init(title: "Reload Config", action: Selector.init("reloadConfig"), keyEquivalent: "R"))
+        menu.addItem(NSMenuItem.init(title: "Quit", action: Selector.init("quit"), keyEquivalent: "Q"))
+        
+        statusBarItem.menu = menu;
+    }
+    
+    @objc func reloadConfig(){
+        xbCore.reloadConfig()
+    }
+    
+    @objc func quit(){
+        NSApp.terminate(nil)
     }
     
     func applicationWillFinishLaunching(_ aNotification: Notification) {

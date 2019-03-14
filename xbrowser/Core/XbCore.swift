@@ -13,6 +13,7 @@ class XbCore: NSObject{
 
     var ctx:JSContext
     
+    static var xBrowserKey = "xBrowser"
     
     override init(){
         ctx = JSContext()
@@ -36,14 +37,20 @@ class XbCore: NSObject{
             ctx.evaluateScript(config)
             NSLog("load conf")
             logException()
-        }catch let configError as NSError {
+        }catch {
             NSLog("load config failed")
         }
     }
     
+    func reloadConfig(){
+        let xBrowser = ctx.objectForKeyedSubscript(XbCore.xBrowserKey)
+        xBrowser?.invokeMethod("clearHandler", withArguments:nil)
+        loadConfig()
+    }
+    
     func handleUrl(_ url: URL, app: NSApplication) -> XbHandledInfo?{
         //NSLog(url.absoluteString)
-        let xBrowser = ctx.objectForKeyedSubscript("xBrowser")
+        let xBrowser = ctx.objectForKeyedSubscript(XbCore.xBrowserKey)
         logException()
         let val = xBrowser?.invokeMethod("getHandledInfo", withArguments: [url.absoluteString, nil])
         logException()
