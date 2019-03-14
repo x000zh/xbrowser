@@ -11,7 +11,7 @@ file path: `~/.xbrowser.js`
     "use strict";
 
     xBrowser.addHandler(
-        function(url, opt){
+        function(urlObj, opt, url){
             if(/^https?:\/\/([^\.]*\.)?google\.com\/?.*/.test(url)){
                 return {
                     bundleIdentifier: xBrowser.chrome,
@@ -20,9 +20,9 @@ file path: `~/.xbrowser.js`
             }
     });
     xBrowser.addHandler(
-        function(url, opt){
+        function(urlObj, opt, url){
             //http://www.baidu.com
-            if(/^https?:\/\/([^\.]*\.)?baidu\.com\/?.*/.test(url)){
+            if('www.baidu.com' == urlObj.hostname){
                 return {
                     bundleIdentifier: xBrowser.safari,
                     url: url
