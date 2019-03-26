@@ -65,8 +65,9 @@ class AppDelegate: NSObject, NSApplicationDelegate {
             let info = xbCore.handleUrl(url, app: application)
             if(nil != info) {
                 NSLog("%@", XbUtil.getString(info?.toString()))
+                let url = URL.init(string: (info?.url)!)
                 NSWorkspace.shared.open(
-                    [url],
+                    [url!],
                     withAppBundleIdentifier: info?.bundleIdentifier,
                     options: openInBackground ? NSWorkspace.LaunchOptions.withoutActivation : NSWorkspace.LaunchOptions.default,
                     additionalEventParamDescriptor: nil,

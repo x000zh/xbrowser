@@ -60,7 +60,7 @@ class XbCore: NSObject{
     }
     
     func makeOpt(url: URL, app: NSApplication) -> XbHandleOpt? {
-        app.
+        return nil;
     }
     
     func parseValue(_ val: JSValue?) -> XbHandledInfo?{
