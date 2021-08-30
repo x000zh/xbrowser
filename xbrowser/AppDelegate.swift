@@ -15,7 +15,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 
     var xbCore: XbCore!
     var statusBarItem: NSStatusItem!
-
+    
     func applicationDidFinishLaunching(_ aNotification: Notification) {
         // Insert code here to initialize your application
         
@@ -64,7 +64,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         for url in urls{
             let info = xbCore.handleUrl(url, app: application)
             if(nil != info) {
-                NSLog("%@", XbUtil.getString(info?.toString()))
+                XbCoreLogger.Logger.debug("%@", XbUtil.getString(info?.toString()))
                 let url = URL.init(string: (info?.url)!)
                 NSWorkspace.shared.open(
                     [url!],

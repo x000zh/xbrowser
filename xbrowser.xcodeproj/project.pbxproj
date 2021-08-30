@@ -17,6 +17,7 @@
 		AE408201223996DA00D1C60B /* XbHandledInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE408200223996DA00D1C60B /* XbHandledInfo.swift */; };
 		AE40820322399A8C00D1C60B /* XbUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE40820222399A8C00D1C60B /* XbUtil.swift */; };
 		AEA96B36223A950D00BA16F8 /* XbHandleOpt.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEA96B35223A950D00BA16F8 /* XbHandleOpt.swift */; };
+		AEE316B326D90AA0000D6517 /* XbCoreLogger.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEE316B226D90AA0000D6517 /* XbCoreLogger.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +55,7 @@
 		AE408200223996DA00D1C60B /* XbHandledInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XbHandledInfo.swift; sourceTree = "<group>"; };
 		AE40820222399A8C00D1C60B /* XbUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XbUtil.swift; sourceTree = "<group>"; };
 		AEA96B35223A950D00BA16F8 /* XbHandleOpt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XbHandleOpt.swift; sourceTree = "<group>"; };
+		AEE316B226D90AA0000D6517 /* XbCoreLogger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XbCoreLogger.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -140,6 +142,7 @@
 				AE408200223996DA00D1C60B /* XbHandledInfo.swift */,
 				AE40820222399A8C00D1C60B /* XbUtil.swift */,
 				AEA96B35223A950D00BA16F8 /* XbHandleOpt.swift */,
+				AEE316B226D90AA0000D6517 /* XbCoreLogger.swift */,
 			);
 			path = Core;
 			sourceTree = "<group>";
@@ -215,7 +218,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1010;
-				LastUpgradeCheck = 1010;
+				LastUpgradeCheck = 1240;
 				ORGANIZATIONNAME = "Zhang Xiang";
 				TargetAttributes = {
 					AE13772822393DF900C31500 = {
@@ -288,6 +291,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AEE316B326D90AA0000D6517 /* XbCoreLogger.swift in Sources */,
 				AE4081FC2239715100D1C60B /* XbCore.swift in Sources */,
 				AEA96B36223A950D00BA16F8 /* XbHandleOpt.swift in Sources */,
 				AE13772D22393DF900C31500 /* AppDelegate.swift in Sources */,
@@ -365,6 +369,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -426,6 +431,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -458,6 +464,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = DYWT34U2TZ;
@@ -476,6 +483,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = DYWT34U2TZ;

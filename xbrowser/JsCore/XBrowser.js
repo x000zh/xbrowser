@@ -20,10 +20,10 @@ class XBrowser{
         let result = null;
         let len = this.rules.length;
         url = url.trim();
-        let urlObj = this.parseUrl(url);
+        let urlObj = JSON.parse(url);
         for(let i=0; i<len; ++i){
             let func = this.rules[i];
-            let ret = func(urlObj, opt, url);
+            let ret = func(urlObj, opt, urlObj.href);
             if(!!ret){
                 result = ret;
                 break;
@@ -32,7 +32,7 @@ class XBrowser{
         if(!result){
             result = {
                 bundleIdentifier: this.defaultBrowser,
-                url: url
+                url: urlObj.href
             };
         }
         currentHandler = result;
