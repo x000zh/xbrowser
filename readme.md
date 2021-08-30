@@ -30,5 +30,21 @@ file path: `~/.xbrowser.js`
             }
         }
     )
+    xBrowser.addHandler(
+        function(urlObj, opt, url){
+            if('support.mozilla.org' == urlObj.hostname){
+                return {
+                    bundleIdentifier: xBrowser.firefox,
+                    url: url
+                }
+            }
+            else if('xxx' == urlObj.hostname){
+                return {
+                    bundleIdentifier: 'your bundle identifier',
+                    url: url
+                }
+            }
+        }
+    )
 })(xBrowser);
 ```
