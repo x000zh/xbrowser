@@ -135,7 +135,7 @@ class XbCore: NSObject{
     
     func logException() {
         if(nil != ctx.exception){
-            NSLog("Exception: %@", getString(ctx.exception))
+            XbCoreLogger.Logger.warning("Exception: %@", getString(ctx.exception))
         }
     }
 
